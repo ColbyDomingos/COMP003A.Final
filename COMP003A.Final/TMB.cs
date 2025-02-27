@@ -83,7 +83,26 @@ namespace COMP003A.Final
             }
         }
 
+        public void MarkTaskComplete(int taskID)
+        {
+            try
+            {
+                Task task = Tasks.Find(t => t.ID == taskID);
+                if (task != null)
+                {
+                    task.IsCompleted = true;
+                }
+                else
+                {
+                    Console.WriteLine("Task was not found!");
+                }
+            }
 
+            catch (Exception ex)
+            {
+                Console.WriteLine("Cannot mark task complete!: " + ex.Message);
+            }
+        }
 
         
     }
