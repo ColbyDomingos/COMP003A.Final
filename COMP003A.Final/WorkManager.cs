@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace COMP003A.Final
 {
-    public class PersonalManager : TMB
+    public class WorkManager : TMB
     {
         public override void DisplayTasks()
         {
-            Console.WriteLine("Personal Task List");
+            Console.WriteLine("Work Task List");
             base.DisplayTasks();
         }
     }
