@@ -130,5 +130,20 @@ namespace COMP003A.Final
         }
 
         
+        public virtual void DisplayTasks()
+        {
+            if(Tasks.Count == 0)
+            {
+                Console.WriteLine("No tasks available");
+            }
+
+            else
+            {
+                foreach (var task in Tasks)
+                {
+                    Console.WriteLine("ID: " + task.ID + ", Title: "  + task.Title + ", Due: " + task.DueDate + ", Completed: " + task.IsCompleted);
+                }
+            }
+        }
     }
 }
