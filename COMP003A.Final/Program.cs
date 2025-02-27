@@ -3,6 +3,7 @@
 //Faculty: Jonathan Rodrigo Cruz
 //Description: Final project for the course COMP003A
 
+using System.Linq.Expressions;
 using System.Transactions;
 
 namespace COMP003A.Final
@@ -67,8 +68,39 @@ namespace COMP003A.Final
                         string newDescription = Console.ReadLine();
                         Console.WriteLine("Enter the new Due Date (year-me-da): ");
                         DateTime newDueDate = DateTime.Parse(Console.ReadLine());
-                        taskManager.UpdateTask(ID, newTitle, newDescription, newDueDate)
+                        taskManager.UpdateTask(ID, newTitle, newDescription, newDueDate);
                     }
+
+                    else if (option == 3)
+                    {
+                        Console.WriteLine("Enter the Task ID: ");
+                        int id = int.Parse(Console.ReadLine());
+                        taskManager.RemoveTask(id);
+                    }
+
+                    else if (option == 4)
+                    {
+                        Console.WriteLine("Enter the Task ID: ");
+                        int id = int.Parse(Console.ReadLine());
+                        taskManager.MarkTaskComplete(id);
+                    }
+
+                    else if (option == 5)
+                    {
+                        taskManager.DisplayTasks();
+                    }
+
+                    else if (option == 6)
+                    {
+                        break;
+                    }
+                }
+
+
+
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Invalid input: " + ex.Message);
                 }
             }
         }
