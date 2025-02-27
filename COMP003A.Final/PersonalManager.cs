@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace COMP003A.Final
 {
-    internal class PersonalManager
+    internal class PersonalManager : TMB
     {
-
+        public override void DisplayTasks()
+        {
+            Console.WriteLine("Personal Task List");
+            base.DisplayTasks();
+        }
     }
 }
