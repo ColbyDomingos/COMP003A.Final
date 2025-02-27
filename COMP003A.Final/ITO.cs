@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace COMP003A.Final
 {
+    /// <summary>
+    /// This is the interface for all the task operations that are possible.
+    /// </summary>
     public interface ITO
     {
         void AddTask(string title, string description, DateTime dueDate);
