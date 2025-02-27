@@ -34,5 +34,32 @@ namespace COMP003A.Final
                 Console.WriteLine("Error when adding task: " + ex.ToString());
             }
         }
+
+
+        public void RemoveTask(int taskID)
+        {
+            try
+            {
+                Task task = Tasks.Find(t => t.ID == taskID);
+                if (task != null)
+                {
+                    Tasks.Remove(task);
+                }
+
+                else
+                {
+                    Console.WriteLine("Task was not Found!!!");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine("Cannot remove task!: " + ex.Message);
+            }
+        }
+
+
+
+        
     }
 }
