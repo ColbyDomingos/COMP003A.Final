@@ -129,19 +129,21 @@ namespace COMP003A.Final
             }
         }
 
-        
+        /// <summary>
+        /// Displays all the tasks in the list
+        /// </summary>
         public virtual void DisplayTasks()
         {
             if(Tasks.Count == 0)
             {
-                Console.WriteLine("No tasks available");
+                Console.WriteLine("No tasks available"); // if there is no tasks say no tasks available
             }
 
-            else
+            else //if there IS tasks in the list
             {
-                foreach (var task in Tasks)
+                foreach (var task in Tasks) //for every task in the list tasks
                 {
-                    Console.WriteLine("ID: " + task.ID + ", Title: "  + task.Title + ", Due: " + task.DueDate + ", Completed: " + task.IsCompleted);
+                    Console.WriteLine("ID: " + task.ID + ", Title: "  + task.Title + ", Due: " + task.DueDate + ", Completed: " + task.IsCompleted); //Display all tasks and their respective descriptions and such
                 }
             }
         }

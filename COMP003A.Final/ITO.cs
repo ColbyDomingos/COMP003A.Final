@@ -17,7 +17,7 @@ namespace COMP003A.Final
 
         void RemoveTask(int taskID);
 
-        void MarkTaskCompleted(int taskID);
+        void MarkTaskComplete(int taskID);
 
         void DisplayTasks();
     }
