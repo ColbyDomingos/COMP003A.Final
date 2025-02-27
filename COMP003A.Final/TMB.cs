@@ -36,6 +36,31 @@ namespace COMP003A.Final
         }
 
 
+        public void UpdateTask(int taskID, string newTitle, string newDescription, DateTime newDueDate)
+        {
+            try
+            {
+                Task task = Tasks.Find(t => t.ID == taskID);
+                if (task != null)
+                {
+                    task.Title = newTitle;
+                    task.Description = newDescription;
+                    task.DueDate = newDueDate;
+                }
+
+                else
+                {
+                    Console.WriteLine("\nTASK WASN'T FOUND");
+                }
+            }
+
+            catch(Exception ex)
+            {
+                Console.WriteLine("Error when updating task: " + ex.Message);
+            }
+        }
+
+
         public void RemoveTask(int taskID)
         {
             try
