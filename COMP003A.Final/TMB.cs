@@ -11,8 +11,8 @@ namespace COMP003A.Final
     /// </summary>
     public class TMB : ITO
     {
-        protected List<Task> Tasks = new List<Task>();
-        private int taskIDCounter = 1;
+        protected List<Task> Tasks = new List<Task>(); //initializes the list for the tasks
+        private int taskIDCounter = 1; //sets the task counter to 1 to prevent 0 which would lead to an error
 
         /// <summary>
         /// This is the addTask method which adds a task and has a max of 50, more than 50 might just be torture
@@ -20,7 +20,7 @@ namespace COMP003A.Final
         /// <param name="title"></param>
         /// <param name="description"></param>
         /// <param name="dueDate"></param>
-        public void AddTask(string title, string description, DateTime dueDate)
+        public void AddTask(string title, string description, DateTime dueDate) //passes through all the values to add a task
         {
             try
             {

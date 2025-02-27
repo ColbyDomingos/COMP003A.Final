@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace COMP003A.Final
 {
-    public class WorkManager : TMB
+    /// <summary>
+    /// The manager for the work tasks
+    /// </summary>
+    public class WorkManager : TMB //Passes with the Task Manager Base, makes it a derived class
     {
-        public override void DisplayTasks()
+        public override void DisplayTasks()  //overrides the displaytask method
         {
-            Console.WriteLine("Work Task List");
-            base.DisplayTasks();
+            Console.WriteLine("Work Task List"); //simply display the tasks for the selected manager
+            base.DisplayTasks();// changes the display task method
         }
     }
 }

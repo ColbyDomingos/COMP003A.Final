@@ -12,7 +12,7 @@ namespace COMP003A.Final
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Select Task Manager: \n 1. Personal \n 2. Work \n 3.Daily ");
+            Console.WriteLine("Select Task Manager: \n 1. Personal \n 2. Work \n 3. Daily ");
             int choice = int.Parse(Console.ReadLine());
 
             TMB taskManager;
@@ -35,7 +35,7 @@ namespace COMP003A.Final
 
             while (true)
             {
-                Console.WriteLine("|--Menu--|");
+                Console.WriteLine("\n|--Menu--|");
                 Console.WriteLine("1. Add");
                 Console.WriteLine("2. Update");
                 Console.WriteLine("3. Remove");
