@@ -9,7 +9,7 @@ namespace COMP003A.Final
     /// <summary>
     /// This class controls the base variables for all other classes to take 
     /// </summary>
-    internal class Task
+    public class Task
     {
         public int ID {  get; set; }
 
